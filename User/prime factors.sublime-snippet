@@ -1,0 +1,21 @@
+<snippet>
+    <content><![CDATA[
+set<int>factors(int N){
+
+    set<int>f;
+    for(int x = 2; x*x <= N; ++x){
+        while(N%x == 0){
+            f.insert(x);
+             N /= x;
+        }
+    }
+    if(N > 1) f.insert(N);
+    return f;
+}
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>prime factors</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.c++</scope>
+    <decription>Insert a cout with newline</decription>
+</snippet>
